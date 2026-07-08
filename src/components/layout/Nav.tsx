@@ -9,6 +9,7 @@ const LINKS = [
   { href: "/", label: "Inicio" },
   { href: "/planes", label: "Planes" },
   { href: "/tutorial", label: "Tutorial" },
+  { href: "/#contacto", label: "Contáctanos" },
 ];
 
 export default function Nav() {

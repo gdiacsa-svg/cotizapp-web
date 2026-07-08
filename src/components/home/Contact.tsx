@@ -42,7 +42,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="bg-white">
+    <section id="contacto" className="scroll-mt-24 bg-white">
       <div className="mx-auto max-w-2xl px-4 py-20 sm:px-6 sm:py-24">
         <Folio number="008" />
         <h2 className="mt-4 font-heading text-3xl font-extrabold uppercase leading-tight tracking-tight text-ink sm:text-4xl">
