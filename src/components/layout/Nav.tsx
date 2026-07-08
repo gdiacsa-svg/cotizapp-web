@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -18,6 +19,7 @@ export default function Nav() {
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+          <Image src="/logo-icon.png" alt="" width={306} height={342} className="h-8 w-auto" priority />
           <span className="font-heading text-lg font-extrabold uppercase tracking-tight text-ink">
             Cotiz<span className="text-brand-blue">App</span>
           </span>

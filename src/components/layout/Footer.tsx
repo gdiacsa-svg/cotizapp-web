@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,9 +7,12 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <span className="font-heading text-lg font-extrabold uppercase tracking-tight text-white">
-              Cotiz<span className="text-brand-yellow">App</span>
-            </span>
+            <div className="flex items-center gap-2">
+              <Image src="/logo-icon.png" alt="" width={306} height={342} className="h-8 w-auto" />
+              <span className="font-heading text-lg font-extrabold uppercase tracking-tight text-white">
+                Cotiz<span className="text-brand-yellow">App</span>
+              </span>
+            </div>
             <p className="mt-2 max-w-xs font-body text-sm">
               El que cotiza primero, gana la venta.
             </p>
