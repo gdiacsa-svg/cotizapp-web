@@ -13,7 +13,7 @@ export default function Stopwatch({ className = "" }: { className?: string }) {
   }, []);
 
   return (
-    <span className={`font-ticket tabular-nums text-ink ${className}`}>
+    <span className={`font-ticket tabular-nums ${className}`}>
       00:{String(seconds).padStart(2, "0")}
     </span>
   );
