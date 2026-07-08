@@ -1,32 +1,34 @@
-import { FileText, ImageDown, Users, Star } from "lucide-react";
+import { Users, Star } from "lucide-react";
 import Folio from "@/components/ui/Folio";
 import TicketCard from "@/components/ui/TicketCard";
+import CotizacionShowcase from "@/components/showcases/CotizacionShowcase";
+import PdfShareShowcase from "@/components/showcases/PdfShareShowcase";
 
 const FEATURES = [
   {
     folio: "008",
-    icon: FileText,
+    media: <CotizacionShowcase />,
     title: "Crear cotizaciones",
     description: "Arma cotizaciones profesionales en minutos, con tu catálogo a la mano.",
     rotate: "md:-rotate-1",
   },
   {
     folio: "009",
-    icon: ImageDown,
+    media: <PdfShareShowcase />,
     title: "Exportar PDF / JPG",
     description: "Envíalas listas para WhatsApp o correo, sin depender de otra app.",
     rotate: "",
   },
   {
     folio: "010",
-    icon: Users,
+    icon: <Users className="h-7 w-7" strokeWidth={1.75} />,
     title: "Gestión de clientes",
     description: "Guarda datos de tus clientes y encuentra cotizaciones pasadas al toque.",
     rotate: "md:rotate-1",
   },
   {
     folio: "011",
-    icon: Star,
+    icon: <Star className="h-7 w-7" strokeWidth={1.75} />,
     title: "Plan Pro",
     description: "Cotizaciones ilimitadas, marca personalizada y catálogo sin límite.",
     rotate: "md:-rotate-1",
@@ -42,7 +44,7 @@ export default function Features() {
           Todo lo que necesitas para cotizar
         </h2>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-8 sm:grid-cols-2">
           {FEATURES.map((feature, i) => (
             <TicketCard
               key={feature.folio}
@@ -52,7 +54,8 @@ export default function Features() {
               rotateClass={feature.rotate}
               tone="white"
               delay={i * 0.08}
-              icon={<feature.icon className="h-7 w-7" strokeWidth={1.75} />}
+              icon={feature.icon}
+              media={feature.media}
             />
           ))}
         </div>

@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 type TicketCardProps = {
   folio: string;
   icon?: ReactNode;
+  media?: ReactNode;
   title: string;
   description?: string;
   rotateClass?: string;
@@ -18,6 +19,7 @@ type TicketCardProps = {
 export default function TicketCard({
   folio,
   icon,
+  media,
   title,
   description,
   rotateClass = "",
@@ -33,10 +35,11 @@ export default function TicketCard({
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, ease: "easeOut", delay }}
       whileHover={{ y: -4, rotate: 0 }}
-      className={`relative rounded-md border border-dashed border-ink/20 ${
+      className={`relative self-start overflow-hidden rounded-md border border-dashed border-ink/20 ${
         tone === "paper" ? "bg-paper" : "bg-white"
       } p-6 shadow-[3px_3px_0_0_rgba(17,24,39,0.05)] ${rotateClass} ${className}`}
     >
+      {media && <div className="-mx-6 -mt-6 mb-5">{media}</div>}
       <span className="font-ticket text-[10px] uppercase tracking-widest text-ink/35">
         N.º {folio}
       </span>
