@@ -150,8 +150,8 @@ export default function PdfShareShowcase() {
   return (
     <div
       ref={containerRef}
-      className="relative flex h-[380px] w-full items-center justify-center overflow-hidden"
-      style={{ background: "linear-gradient(160deg,#241a3d 0%,#140f24 60%,#0b0813 100%)" }}
+      className="relative flex h-[320px] w-full items-center justify-center overflow-hidden"
+      style={{ background: "radial-gradient(120% 100% at 50% 15%, rgba(37,99,235,0.07), transparent 70%)" }}
     >
       <div ref={stageRef} className="relative z-10 flex flex-col items-center" style={{ transform: `scale(${scale})`, transformOrigin: "center center" }}>
         <div className="float-wrap">
@@ -185,7 +185,7 @@ export default function PdfShareShowcase() {
         }
         .phone-notch { position:absolute; top:22px; left:50%; transform:translateX(-50%); width:80px; height:8px; border-radius:6px; background:#000; z-index:5; }
         .phone-screen { width:100%; height:100%; border-radius:32px; overflow:hidden; position:relative; background:#fff; }
-        .phone-shadow { position:absolute; left:50%; bottom:-60px; width:260px; height:60px; transform:translateX(-50%); background: radial-gradient(closest-side, rgba(70,50,140,.55), transparent 75%); filter: blur(6px); z-index:-1; }
+        .phone-shadow { position:absolute; left:50%; bottom:-40px; width:220px; height:44px; transform:translateX(-50%); background: radial-gradient(closest-side, rgba(17,24,39,.18), transparent 75%); filter: blur(8px); z-index:-1; }
         .screen-in { animation: screenIn .35s ease; }
         @keyframes screenIn { from{opacity:0; transform:translateX(10px)} to{opacity:1; transform:translateX(0)} }
         .cursor-pulse { animation: cursorPulse .26s ease; }
