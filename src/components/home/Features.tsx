@@ -1,0 +1,62 @@
+import { FileText, ImageDown, Users, Star } from "lucide-react";
+import Folio from "@/components/ui/Folio";
+import TicketCard from "@/components/ui/TicketCard";
+
+const FEATURES = [
+  {
+    folio: "008",
+    icon: FileText,
+    title: "Crear cotizaciones",
+    description: "Arma cotizaciones profesionales en minutos, con tu catálogo a la mano.",
+    rotate: "md:-rotate-1",
+  },
+  {
+    folio: "009",
+    icon: ImageDown,
+    title: "Exportar PDF / JPG",
+    description: "Envíalas listas para WhatsApp o correo, sin depender de otra app.",
+    rotate: "",
+  },
+  {
+    folio: "010",
+    icon: Users,
+    title: "Gestión de clientes",
+    description: "Guarda datos de tus clientes y encuentra cotizaciones pasadas al toque.",
+    rotate: "md:rotate-1",
+  },
+  {
+    folio: "011",
+    icon: Star,
+    title: "Plan Pro",
+    description: "Cotizaciones ilimitadas, marca personalizada y catálogo sin límite.",
+    rotate: "md:-rotate-1",
+  },
+];
+
+export default function Features() {
+  return (
+    <section className="bg-paper">
+      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24">
+        <Folio number="003" />
+        <h2 className="mt-4 max-w-2xl font-heading text-3xl font-extrabold uppercase leading-tight tracking-tight text-ink sm:text-4xl">
+          Todo lo que necesitas para cotizar
+        </h2>
+
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {FEATURES.map((feature, i) => (
+            <TicketCard
+              key={feature.folio}
+              folio={feature.folio}
+              title={feature.title}
+              description={feature.description}
+              rotateClass={feature.rotate}
+              tone="white"
+              delay={i * 0.08}
+              icon={<feature.icon className="h-7 w-7" strokeWidth={1.75} />}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
