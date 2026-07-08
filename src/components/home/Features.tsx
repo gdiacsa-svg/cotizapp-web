@@ -1,8 +1,9 @@
-import { Users, Star } from "lucide-react";
 import Folio from "@/components/ui/Folio";
 import TicketCard from "@/components/ui/TicketCard";
 import CotizacionShowcase from "@/components/showcases/CotizacionShowcase";
 import PdfShareShowcase from "@/components/showcases/PdfShareShowcase";
+import ClientesShowcase from "@/components/showcases/ClientesShowcase";
+import CobrosShowcase from "@/components/showcases/CobrosShowcase";
 
 const FEATURES = [
   {
@@ -21,16 +22,16 @@ const FEATURES = [
   },
   {
     folio: "010",
-    icon: <Users className="h-7 w-7" strokeWidth={1.75} />,
+    media: <ClientesShowcase />,
     title: "Gestión de clientes",
     description: "Guarda datos de tus clientes y encuentra cotizaciones pasadas al toque.",
     rotate: "md:rotate-1",
   },
   {
     folio: "011",
-    icon: <Star className="h-7 w-7" strokeWidth={1.75} />,
-    title: "Plan Pro",
-    description: "Cotizaciones ilimitadas, marca personalizada y catálogo sin límite.",
+    media: <CobrosShowcase />,
+    title: "Cobros",
+    description: "Registra abonos y da seguimiento a cada pago, sin perder el hilo de quién te debe qué.",
     rotate: "md:-rotate-1",
   },
 ];
@@ -54,7 +55,6 @@ export default function Features() {
               rotateClass={feature.rotate}
               tone="white"
               delay={i * 0.08}
-              icon={feature.icon}
               media={feature.media}
             />
           ))}
