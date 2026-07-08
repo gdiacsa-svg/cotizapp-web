@@ -75,7 +75,7 @@ export default function Pricing() {
               N.º 013 — Pro
             </span>
             <div className="mt-3 flex items-baseline gap-1">
-              <span className="font-heading text-4xl font-extrabold text-ink">$99</span>
+              <span className="font-heading text-4xl font-extrabold text-ink">$69</span>
               <span className="font-body text-sm text-ink/50">/ mes</span>
             </div>
             <ul className="mt-6 space-y-3">
