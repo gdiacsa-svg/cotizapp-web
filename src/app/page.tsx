@@ -5,6 +5,7 @@ import HowItWorks from "@/components/home/HowItWorks";
 import Pricing from "@/components/home/Pricing";
 import Audience from "@/components/home/Audience";
 import Faq from "@/components/home/Faq";
+import Contact from "@/components/home/Contact";
 import FinalCta from "@/components/home/FinalCta";
 import SectionDivider from "@/components/ui/SectionDivider";
 
@@ -24,6 +25,8 @@ export default function Home() {
       <Audience />
       <SectionDivider />
       <Faq />
+      <SectionDivider />
+      <Contact />
       <FinalCta />
     </>
   );

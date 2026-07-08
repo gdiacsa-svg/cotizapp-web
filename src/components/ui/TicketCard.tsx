@@ -35,7 +35,7 @@ export default function TicketCard({
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, ease: "easeOut", delay }}
       whileHover={{ y: -4, rotate: 0 }}
-      className={`relative self-start overflow-hidden rounded-md border border-dashed border-ink/20 ${
+      className={`relative overflow-hidden rounded-md border border-dashed border-ink/20 ${
         tone === "paper" ? "bg-paper" : "bg-white"
       } p-6 shadow-[3px_3px_0_0_rgba(17,24,39,0.05)] ${rotateClass} ${className}`}
     >
@@ -44,9 +44,9 @@ export default function TicketCard({
         N.º {folio}
       </span>
       {icon && <div className="mt-3 text-brand-blue">{icon}</div>}
-      <h3 className="mt-3 font-heading text-lg font-bold text-ink">{title}</h3>
+      <h3 className="mt-3 line-clamp-2 font-heading text-lg font-bold text-ink">{title}</h3>
       {description && (
-        <p className="mt-2 font-body text-sm leading-relaxed text-ink/65">
+        <p className="mt-2 line-clamp-3 font-body text-sm leading-relaxed text-ink/65">
           {description}
         </p>
       )}
