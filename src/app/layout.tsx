@@ -22,10 +22,33 @@ const plexMono = IBM_Plex_Mono({
   weight: ["500", "600"],
 });
 
+const SITE_URL = "https://cotizapp.com.mx";
+const SITE_TITLE = "CotizApp — El que cotiza primero, gana la venta";
+const SITE_DESCRIPTION =
+  "Genera cotizaciones profesionales desde tu celular en minutos. Para plomeros, carpinteros, instaladores, vendedores y freelancers en México.";
+
 export const metadata: Metadata = {
-  title: "CotizApp — El que cotiza primero, gana la venta",
-  description:
-    "Genera cotizaciones profesionales desde tu celular en minutos. Para plomeros, carpinteros, instaladores, vendedores y freelancers en México.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: "%s — CotizApp",
+  },
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: "CotizApp",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "CotizApp" }],
+    locale: "es_MX",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({

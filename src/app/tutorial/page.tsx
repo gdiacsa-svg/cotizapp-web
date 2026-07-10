@@ -15,8 +15,22 @@ import Section08Perfil from "@/components/tutorial/Section08Perfil";
 import Section09Planes from "@/components/tutorial/Section09Planes";
 import Section10Respaldo from "@/components/tutorial/Section10Respaldo";
 
+const TITLE = "Manual de uso";
+const DESCRIPTION =
+  "Aprende a usar CotizApp paso a paso: instalación, clientes, productos, cotizaciones, cobros y respaldo. La guía completa para empezar a cotizar hoy.";
+
 export const metadata: Metadata = {
-  title: "Tutorial — CotizApp",
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    title: `${TITLE} — CotizApp`,
+    description: DESCRIPTION,
+    url: "/tutorial",
+  },
+  twitter: {
+    title: `${TITLE} — CotizApp`,
+    description: DESCRIPTION,
+  },
 };
 
 export default function TutorialPage() {

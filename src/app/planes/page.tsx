@@ -7,8 +7,22 @@ import PlanesFaq from "@/components/planes/PlanesFaq";
 import FinalCta from "@/components/home/FinalCta";
 import SectionDivider from "@/components/ui/SectionDivider";
 
+const TITLE = "Planes y precios";
+const DESCRIPTION =
+  "Empieza gratis o pásate a Pro por $69/mes ($599/año) y cotiza sin límites. Compara planes y elige el que se ajuste a tu negocio.";
+
 export const metadata: Metadata = {
-  title: "Planes — CotizApp",
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    title: `${TITLE} — CotizApp`,
+    description: DESCRIPTION,
+    url: "/planes",
+  },
+  twitter: {
+    title: `${TITLE} — CotizApp`,
+    description: DESCRIPTION,
+  },
 };
 
 export default function PlanesPage() {
