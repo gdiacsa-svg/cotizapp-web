@@ -41,14 +41,6 @@ export default function Nav() {
               </Link>
             );
           })}
-          <a
-            href="https://play.google.com/store"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-brand-blue px-5 py-2 font-body text-sm font-semibold text-white transition-transform hover:scale-105"
-          >
-            Descargar app
-          </a>
         </nav>
 
         <button
@@ -95,14 +87,6 @@ export default function Nav() {
               </Link>
             );
           })}
-          <a
-            href="https://play.google.com/store"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 rounded-full bg-brand-blue px-5 py-2 text-center font-body text-sm font-semibold text-white"
-          >
-            Descargar app
-          </a>
         </nav>
       )}
     </header>

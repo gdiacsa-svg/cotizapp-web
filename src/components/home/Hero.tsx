@@ -21,15 +21,34 @@ export default function Hero() {
             Mientras piensas la tuya, tu competencia ya mandó la suya — no
             dejes que se te vaya el cliente.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="https://play.google.com/store"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-brand-blue px-7 py-3.5 font-body text-sm font-bold text-white shadow-lg shadow-brand-blue/20 transition-transform hover:scale-105"
-            >
-              Descargar gratis
-            </a>
+          <div className="mt-8 flex flex-wrap items-end gap-4">
+            <div>
+              <p className="font-body text-sm text-ink/60">Disponible en:</p>
+              <div className="mt-2 flex flex-wrap items-center gap-3">
+                <a
+                  href="https://apps.apple.com/mx/app/id6802864250"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/App_Store.png"
+                    alt="Descárgalo en App Store"
+                    className="h-12 w-auto"
+                  />
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.diacsa.cotizapppro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/GooglePlay.png"
+                    alt="Disponible en Google Play"
+                    className="h-12 w-auto"
+                  />
+                </a>
+              </div>
+            </div>
             <Link
               href="/planes"
               className="rounded-full border-2 border-ink/15 px-7 py-3.5 font-body text-sm font-bold text-ink transition-colors hover:border-ink/30"
