@@ -27,6 +27,33 @@ export default function PlanesHero() {
           Empieza gratis. Cuando tu negocio crezca, Pro te espera —
           sin contratos ni letras chiquitas.
         </motion.p>
+        <div className="mt-8">
+          <p className="font-body text-sm text-ink/60">Disponible en:</p>
+          <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://apps.apple.com/mx/app/id6802864250"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/App_Store.png"
+                alt="Descárgalo en App Store"
+                className="h-12 w-auto"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.diacsa.cotizapppro"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/GooglePlay.png"
+                alt="Disponible en Google Play"
+                className="h-12 w-auto"
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
